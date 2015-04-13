@@ -1,44 +1,74 @@
 <!doctype html>
 <html>
-<head>
-<meta charset="utf-8">
+    <head>
+        <meta charset="utf-8">
         <link href="lib/css/bootstrap.css" rel="stylesheet" type="text/css">
         <link href="lib/css/createAccountStyle.css" rel="stylesheet" type="text/css">
-<title>Untitled Document</title>
-</head>
+        <script type="text/javascript" src="lib/js/jquery-ui.js"></script>
+        <link rel="stylesheet" href="lib/css/jquery-ui.css">
+        
 
-<body>
-<form id="createForm">
-    	Name<br>
-        <input type="text" id="firstNameID" class="inputs"/>
-         <input type="text" id="lastNameID" class="inputs"/>
-         <br>
-    Choose Your email<br>
-  <input type="email" id="emailID" class="inputs"/><br>
-        Create a password<br>
-  <input type="password" id="passwordID" class="inputs"/><br>
-        Confirm your password<br>
-  <input type="password" id="confirmPasswordID" class="inputs"/><br>
-        ID Number<br>
-  <input type="number" id="idNumberID" class="inputs"/><br>
-        Gender<br>
-  <input type="text" id="genderID" class="inputs"/><br>
-        Mobile phone
-        <br>
-  <input type="tel" id="telID" class="inputs"/><br><br>
-  <input type="checkbox"/>I agree to the Thogakade Terms and Services and Privacy Policy<br>
-        <Button class="btn btn-info">Submit</button>
-    
-    	
-    
-    
-    
-    
-    
-    
-    
-</form>
-	
+        <style>
+            
+            #createForm{
+                border :1ps solid;
+            }
+            .body{
+                color: #ffffff;
+            }
+        </style>
+        
+        
+        <script>
+            
+            
+            
+            
+        </script>
+        
+        
+        
+        <title>Untitled Document</title>
+    </head>
 
-</body>
+    <body>
+        <form id="createForm">
+            
+            Login type<br>
+            
+            <select name="speed" id="speed">
+                <option>Slower</option>
+                <option>Slow</option>
+                <option selected="selected">Medium</option>
+                <option>Fast</option>
+                <option>Faster</option>
+            </select>
+            <br>
+            
+            
+            Name<br>
+            <input type="text" id="firstNameID" class="input input-sm"/>
+            <input type="text" id="lastNameID" class="input input-sm"/>
+            <br>
+            Choose Your email<br>
+            <input type="email" id="emailID" class="input input-sm"/><br>
+            Create a password<br>
+            <input type="password" id="passwordID" class="input input-sm"/><br>
+            Confirm your password<br>
+            <input type="password" id="confirmPasswordID" class="input input-sm"/><br>
+            ID Number<br>
+            <input type="number" id="idNumberID" class="input input-sm"/><br>
+            Gender<br>
+            <input type="text" id="genderID" class="input input-sm"/><br>
+            Birthday<br>
+            <input type="text" id="genderID" class="input input-sm"/><br>
+            Mobile phone
+            <br>
+            <input type="tel" id="telID" class="input input-sm"/><br><br>
+            <input type="checkbox"/>I agree to the Thogakade Terms and Services and Privacy Policy<br>
+            <Button class="btn btn-info">Submit</button>
+        </form>
+
+
+    </body>
 </html>
