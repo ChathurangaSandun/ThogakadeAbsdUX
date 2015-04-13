@@ -1,0 +1,70 @@
+@charset "utf-8";
+
+
+body .inputs{
+    opacity: .5;
+    
+}
+
+#errormesdegeId{
+    color: red;
+	
+}
+#loginForm {
+	width: 375px;
+	height: 415px;
+	padding-top: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	margin-bottom: 20px;
+	background-color: #F7F7F7;
+	text-shadow: 0px 0px;
+	background-origin: border-box;
+	background-clip: content-box;
+	-webkit-box-shadow: 0px 1px 5px 0px #666666;
+	box-shadow: 0px 1px 5px 0px #666666;
+}
+.inputs {
+	width: 300px;
+	height: 45px;
+	text-indent: 10px;
+	font-size: large;
+}
+#loginForm .btn.btn-info {
+	width: 300px;
+	font-size: large;
+	text-align: center;
+	font-weight: bold;
+	padding-bottom: 6px;
+	margin-bottom: 10px;
+	background-color: #4B8CF7;
+}
+#checkbox {
+	padding-top: 0px;
+	left: 0px;
+	margin-top: 0px;
+	margin-left: 25px;
+
+}
+#needHelp {
+	float: right;
+	clear: right;
+	padding-top: 25px;
+	right: 25px;
+	margin-right: 2px;
+	margin-left: 20px;
+
+
+}
+#image {
+	width: 375px;
+	height: 200px;
+	padding-bottom: 25px;
+	padding-left: 0px;
+}
+#loginForm center #passwordInput {
+}
+#headDiv {
+	height: 150px;
+}
