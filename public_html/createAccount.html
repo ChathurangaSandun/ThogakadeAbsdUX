@@ -130,7 +130,7 @@
                             !isEmpty(idNumber) && !isEmpty(mobileNumber) ) {
                         if (password === confirmPassword) {
                             alert("create your account");
-                            $("#createForm").resetForm();
+                            $("#submitId").load("index.html");
                         } else {
                             alert("Your password not match");
                         }
