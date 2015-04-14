@@ -102,15 +102,16 @@ and open the template in the editor.
             }
 
             $('#submitId').click(function () {
+                console.log("ok");
                 var firstName = $("#firstNameID").val();
                 var address = $("#addressID").val();
                 var email = $("#emailID").val();
                 var idNumber = $("#idNumberID").val();
                 var mobileNumber = $("#telID").val();
-                
-                console.log("ok");
 
-                if (!isEmpty(firstName) ) {
+
+
+                if (!isEmpty(firstName)) {
                     console.log("added");
                     alert("create your account");
                     $("#mainForm").resetForm();
@@ -118,7 +119,7 @@ and open the template in the editor.
                     alert(" some fault");
                 }
 
-
+                alert("fdf");
 
             });
 
