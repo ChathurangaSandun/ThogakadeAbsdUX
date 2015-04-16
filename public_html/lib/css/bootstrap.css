@@ -256,7 +256,8 @@ th {
     border-top-color: #000 !important;
   }
   .label {
-    border: 1px solid #000;
+	border: 1px solid #000;
+	font-size: larger;
   }
   .table {
     border-collapse: collapse !important;
@@ -4466,7 +4467,8 @@ a.label:focus {
   cursor: pointer;
 }
 .label:empty {
-  display: none;
+	display: none;
+	font-size: 200%;
 }
 .btn .label {
   position: relative;
@@ -6210,5 +6212,3 @@ button.close {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
-
-

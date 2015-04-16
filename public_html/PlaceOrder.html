@@ -41,6 +41,120 @@ and open the template in the editor.
 
 
         </style>
+
+
+        <script type="text/javascript">
+
+            var condition = "Add";
+            var deleteButton = "<input type='button' class='btn btn-link' id='deletebtn' value='Delete' onclick='deleteRow(this)'>"; //delete button
+            var updateButton = "<input type='button' class='btn btn-link' id='editbtn' value='Edit'  onclick='updateRow(this)'>";
+
+
+            function addContact() {
+
+                console.log(condition);
+                if (condition === "Add") {
+                    var length = document.getElementById("orderTableID").rows.length;
+
+                    var itemID = "I " + $("#itemIdInputID").val();
+                    var description = $("#descriptionInputID").val();
+                    var unitPrice = $("#unitPriceInput").val();
+                    var qty = $("#qtyInputID").val();
+                    console.log(qty + " " + unitPrice);
+                    var totalPrice = qty * unitPrice;
+
+                    var table = document.getElementById("orderTableID");
+                    var row = table.insertRow(length);
+                    var cell1 = row.insertCell(0);
+                    var cell2 = row.insertCell(1);
+                    var cell3 = row.insertCell(2);
+                    var cell4 = row.insertCell(3);
+                    var cell5 = row.insertCell(4);
+                    var cell6 = row.insertCell(5);
+                    var cell7 = row.insertCell(6);
+
+
+                    cell1.innerHTML = itemID;
+                    cell2.innerHTML = description;
+                    cell3.innerHTML = unitPrice;
+                    cell4.innerHTML = qty;
+                    cell5.innerHTML = totalPrice;
+                    cell6.innerHTML = updateButton;
+                    cell7.innerHTML = deleteButton;
+
+
+                } else {
+
+
+                    changeContent();
+                    condition = "Add";
+                }
+                totalOrderAmount();
+            }
+
+
+            function deleteRow(r) {
+                var i = r.parentNode.parentNode.rowIndex;
+                document.getElementById("orderTableID").deleteRow(i);
+            }
+
+
+            var rowIndex;
+            function updateRow(r) {
+                document.getElementById("buttonNameID").innerHTML = "Update";
+                console.log("update");
+                condition = "update";
+                rowIndex = r.parentNode.parentNode.rowIndex;
+                var cell1 = document.getElementById("orderTableID").rows[rowIndex].cells[0].innerHTML;
+                cell1 = cell1.split(" ")[1];
+                var cell2 = document.getElementById("orderTableID").rows[rowIndex].cells[1].innerHTML;
+                var cell3 = document.getElementById("orderTableID").rows[rowIndex].cells[2].innerHTML;
+                var cell4 = document.getElementById("orderTableID").rows[rowIndex].cells[3].innerHTML;
+
+                $("#itemIdInputID").val(cell1);
+                $("#descriptionInputID").val(cell2);
+                $("#unitPriceInput").val(cell3);
+                $("#qtyInputID").val(cell4);
+
+
+            }
+
+            function changeContent() {
+
+                var rows = document.getElementById('orderTableID').rows
+                var cells = rows[rowIndex].cells;
+                cells[0].innerHTML = "I " + $("#itemIdInputID").val();
+                cells[1].innerHTML = $("#descriptionInputID").val();
+                cells[2].innerHTML = $("#unitPriceInput").val();
+                cells[3].innerHTML = $("#qtyInputID").val();
+                cells[4].innerHTML = $("#qtyInputID").val() * $("#unitPriceInput").val();
+
+                alert("Updated.");
+                document.getElementById("buttonNameID").innerHTML = "Add";
+            }
+
+
+
+
+            function totalOrderAmount() {
+                var rowCount = $('#orderTableID tr').length;
+
+                var totalAmount = 0;
+                var i = 0;
+                for (i; i < rowCount; i++) {
+                    totalAmount += document.getElementById("orderTableID").rows[i].cells[4].innerHTML; 
+                }
+                
+                console.log(totalAmount);
+            }
+
+
+
+
+        </script>
+
+
+
     </head>
 
 
@@ -84,35 +198,35 @@ and open the template in the editor.
                             <label> Item ID</label>
                             <div class="input-group col-sm-12">
                                 <div class="input-group-addon">I</div>
-                                <input type="text" class="form-control col-sm-12"/>
+                                <input type="text" class="form-control col-sm-12" id="itemIdInputID"/>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label>Description</label>
-                            <input type="text" class="form-control col-sm-12"/>
+                            <input type="text" class="form-control col-sm-12" id="descriptionInputID" />
                         </div> 
 
                         <div class="form-group">
                             <label> Unit Price</label>
                             <div class="input-group col-sm-12">
                                 <div class="input-group-addon">Rs</div>
-                                <input type="text" class="form-control col-sm-12"/>
+                                <input type="text" class="form-control col-sm-12" id="unitPriceInput"/>
                                 <div class="input-group-addon">.00</div>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label>Qty</label>
-                            <input type="text" class="form-control col-sm-12"/>
+                            <input type="text" class="form-control col-sm-12" id="qtyInputID"/>
                         </div> 
 
                         <div class="btn-group btn-group-justified" role="group" >
                             <div class="btn-group" role="group">
-                                <button type="button" class="btn btn-warning">New Item</button>
+                                <button type="button" class="btn btn-warning" id="newItemButtonID">New Item</button>
                             </div>
                             <div class="btn-group" role="group">
-                                <button type="button" class="btn btn-primary">Add</button>
+                                <button type="button" class="btn btn-primary" onclick="addContact()" id="addButtonID"><font id="buttonNameID">Add</font></button>
                             </div>
                         </div> 
 
@@ -122,14 +236,15 @@ and open the template in the editor.
                     </form>
                 </div>
                 <div class="col-lg-8">
-                    <table class="table table-bordered table-hover table-striped" >
+                    <table class="table table-bordered table-hover table-striped" id="orderTableID" >
                         <th>Item Code</th>
                         <th>Description</th>
                         <th>Unit Price</th>
                         <th>Qty</th>
                         <th>Total Price</th>
+                        <th><b>U</b></th>
+                        <th><b>D</b></th>
 
-                            
 
 
                     </table>
