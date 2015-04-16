@@ -9,8 +9,150 @@ and open the template in the editor.
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="lib/css/bootstrap.css" rel="stylesheet" type="text/css">
+        <link href="lib/css/createAccountStyle.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="lib/js/jquery-ui.js"></script>
+        <link rel="stylesheet" href="lib/css/jquery-ui.css">
+        <script type="text/javascript" src="lib/js/jquery-2.1.3.js" ></script>
+        <script type="text/javascript" src="lib/js/jquery.form.js" ></script>
+        <script type="text/javascript" src="lib/js/jquery.validate.js" ></script>
+        <script type="text/javascript" src="lib/js/bootstrap.js" ></script>
+        <link href="lib/css/bootstrap.css" rel="stylesheet">
+        <link href="lib/css/style.css" rel="stylesheet">
+
+        <style type="text/css">
+
+            #orderForm{
+                font-size: initial;
+                border: 1px solid;
+                padding: 25px;
+                height: 750px;
+            }
+
+            #orderForm .label{
+                font-size: medium;
+                margin-bottom:  15px;
+                padding: 5px;
+            }
+            .col-lg-3{
+                padding: 10px;
+            }
+
+
+
+        </style>
     </head>
+
+
+
     <body>
-        <div>TODO write content</div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <form id ="orderForm"> 
+                        <label id="topic" class="label label-default col-lg-12">Order Detail</label>
+                        <div class="form-group">
+                            <label> Order ID</label>
+                            <div class="input-group col-sm-12">
+                                <div class="input-group-addon">OI</div>
+                                <input type="text" class="form-control col-sm-12"/>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label> Order Date</label>
+                            <input type="text" class="form-control col-sm-12"/>
+                        </div>
+
+                        <label id="topic" class="label label-default col-lg-12">Customer Detail</label>
+                        <div class="form-group">
+                            <label> Customer ID</label>
+                            <div class="input-group col-sm-12">
+                                <div class="input-group-addon">C</div>
+                                <input type="text" class="form-control col-sm-12"/>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label> Customer Name</label>
+                            <input type="text" class="form-control col-sm-12"/>
+                        </div> 
+
+                        <label id="topic" class="label label-default col-lg-12">Items</label>
+                        <div class="form-group">
+                            <label> Item ID</label>
+                            <div class="input-group col-sm-12">
+                                <div class="input-group-addon">I</div>
+                                <input type="text" class="form-control col-sm-12"/>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Description</label>
+                            <input type="text" class="form-control col-sm-12"/>
+                        </div> 
+
+                        <div class="form-group">
+                            <label> Unit Price</label>
+                            <div class="input-group col-sm-12">
+                                <div class="input-group-addon">Rs</div>
+                                <input type="text" class="form-control col-sm-12"/>
+                                <div class="input-group-addon">.00</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Qty</label>
+                            <input type="text" class="form-control col-sm-12"/>
+                        </div> 
+
+                        <div class="btn-group btn-group-justified" role="group" >
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn btn-warning">New Item</button>
+                            </div>
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn btn-primary">Add</button>
+                            </div>
+                        </div> 
+
+
+
+
+                    </form>
+                </div>
+                <div class="col-lg-8">
+                    <table class="table table-bordered table-hover table-striped" >
+                        <th>Item Code</th>
+                        <th>Description</th>
+                        <th>Unit Price</th>
+                        <th>Qty</th>
+                        <th>Total Price</th>
+
+                            
+
+
+                    </table>
+
+
+                </div>
+
+
+
+
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
     </body>
 </html>
