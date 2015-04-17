@@ -7,18 +7,27 @@ and open the template in the editor.
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="lib/js/jquery.balloon.js"></script>
+    
     <title>onblur example</title>
-    <script>
-      function test(){
-        var f1 = document.getElementById("username_input");
-        var f2 = document.getElementById("username_input2");
-        f2.value = f1.value;
-      }
-    </script>
+    
+    
+    
   </head>
 
   <body>
-    <input type="text" name="usermame" id="username_input" value="Field 1" onblur="test()"/>
-    <input type="text" name="username2" id="username_input2" value="Field 2"/>
+    
+    <input type="text" name="username2" id="aa" value="Field 2"/>
+    <script>
+      
+      $(function (){
+          $('aa').balloon({ position: "bottom right" });
+          
+          
+          
+      });
+      
+      
+    </script>
   </body>
 </html>

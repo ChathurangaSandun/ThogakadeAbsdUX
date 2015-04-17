@@ -44,7 +44,7 @@ body .inputs{
 	padding-top: 0px;
 	left: 0px;
 	margin-top: 0px;
-	margin-left: 25px;
+	margin-left: 0px;
 
 }
 #needHelp {
@@ -57,14 +57,19 @@ body .inputs{
 
 
 }
-#image {
+#image image {
 	width: 375px;
-	height: 200px;
-	padding-bottom: 25px;
+	height: 400px;
+	padding-bottom: 100px;
 	padding-left: 0px;
 }
 #loginForm center #passwordInput {
 }
 #headDiv {
 	height: 150px;
+}
+
+#loginImageID{
+    margin: 25px;
+    
 }

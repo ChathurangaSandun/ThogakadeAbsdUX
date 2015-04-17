@@ -12,7 +12,7 @@ and open the template in the editor.
         <link href="lib/css/loginStyle.css" rel="stylesheet" type="text/css">
         <link href="lib/css/bootstrap.css" rel="stylesheet" type="text/css">
 
-    
+
 
 
 
@@ -57,9 +57,9 @@ and open the template in the editor.
             function signIn() {
                 if (username === "Admin" && password === "123") {
                     alert("successfull log");
-                    
+
                 } else {
-                    
+
                     alert("The Username or password you entered is incorrect. ??");
                     //document.getElementById("#errormesdegeId").value = "The Username or password you entered is incorrect. ??";
                 }
@@ -78,30 +78,44 @@ and open the template in the editor.
 
     </head>
     <body>
-    <div id="headDiv"></div>
-<center>
-    <form id="loginForm">
-        <center>
-        <div id="image">
-    	
-    
-    </div>
-            <input class="inputs" id="usernameInput" type="text" value="User Name"  onclick="a(this.id, this.value);"  onblur="b(this.id, this.type, this.value);" />
-            <br>
-            <input class="inputs" id="passwordInput" type="text" value="Password"  onclick="a(this.id, this.value);"  onblur="b(this.id, this.type, this.value);" />
-            <br>
-            <p id="errormesdegeId"></p>
-            <button class ="btn btn-info"  onclick="signIn()">Sign in</button><br>
+        <div id="headDiv">
+            <center>
+            <img src="image/logo.png" width="225" height="50" alt="logo"/><br>
+            
+            <font><h2>One account. Control ThogaKade </h2></font>
+            <font style="font-family: serif"><h4><b>Sign in with your Account</b></h4></font>
+            
+            
             </center>
+            
+            
+            
+        </div>
+    <center>
+        <form id="loginForm">
+            <center>
+                <div id="image">
+                    <center> <image src="image/login.png" id="loginImageID"/></center>
+
+                </div>
+                <input class="inputs" id="usernameInput" type="text" value="User Name"  onclick="a(this.id, this.value);"  onblur="b(this.id, this.type, this.value);" />
+                <br>
+                <input class="inputs" id="passwordInput" type="text" value="Password"  onclick="a(this.id, this.value);"  onblur="b(this.id, this.type, this.value);" />
+                <br>
+                <p id="errormesdegeId"></p>
+                <button class ="btn btn-info"  onclick="signIn()">Sign in</button><br>
+            </center>
+            <div class="col-lg-6 pull-left">
             <input type="checkbox" name="checkBox" value="Stay signed in" id="checkbox"/>
             Stay signed in
-            <a href="#" id="#"> &nbsp;&nbsp;&nbsp;	Need help? </a>
+            </div>
+            <a href="#" id="#" > &nbsp;&nbsp;&nbsp;	Need help?</a>
         </form>
 
-    <a href="createAccount.html">Create an account</a>
+        <a href="createAccount.html">Create an account</a>
 
 
-</center>
+    </center>
 
 </body>
 </html>
