@@ -1,15 +1,14 @@
 @charset "utf-8";
 #orderForm {
 	height: 749px;
-	padding-top: 0px;
-	padding-left: 0px;
-	padding-right: 0px;
-	padding-bottom: 0px;
+	padding-top: 25px;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-bottom: 25px;
 	margin-bottom: 0px;
 	background-color: #F7F7F7;
 	text-shadow: 0px 0px;
 	background-origin: border-box;
-	background-clip: content-box;
 	-webkit-box-shadow: 0px 1px 5px 0px #666666;
 	box-shadow: 0px 1px 5px 0px #666666;
 	margin-top: 0px;
@@ -19,4 +18,29 @@
 }
 #topic {
 	width: 250px;
+}
+#tableDivID {
+		background-color: #F7F7F7;
+	text-shadow: 0px 0px;
+	background-origin: border-box;
+	-webkit-box-shadow: 0px 1px 5px 0px #666666;
+	box-shadow: 0px 1px 5px 0px #666666;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-left: 0px;
+	border-color: #F7F7F7;
+}
+#amoutDiv {
+		background-color: #F7F7F7;
+	text-shadow: 0px 0px;
+	background-origin: border-box;
+	-webkit-box-shadow: 0px 1px 5px 0px #666666;
+	box-shadow: 0px 1px 5px 0px #666666;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-left: 0px;
+	border-color: #F7F7F7;
+}
+#headSentence h1 center #head {
+	font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif;
 }
