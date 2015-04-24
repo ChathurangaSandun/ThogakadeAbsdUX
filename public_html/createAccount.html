@@ -21,10 +21,10 @@
 
             $(document).ready(function () {
                 //validate nic number
-                $.validator.addMethod("nicFormatValidate", function (value, element) {
+                $.validator.addMethod("nicFormatValidate<br>", function (value, element) {
 
                     return this.optional(element) || /^\d{9}[VX]$/i.test(value);
-                }, "Please enter a valid nic");
+                }, "Please enter a valid nic<BR>");
 
                 $.validator.addMethod("samePassword", function () {
                     if ($("#passwordID").val() === $("#confirmPasswordID").val()) {
@@ -39,7 +39,7 @@
                         return true;
                     else
                         return false;
-                }, "<br>In order to use our services, you must agree to Google's Terms of Service");
+                }, "In order to use our services, you must agree to Google's Terms of Service");
 
 
                 $("#createForm").validate({
@@ -155,16 +155,37 @@
     </head>
 
     <body>
-        <form id="createForm">
+    	<div id="headSentence">
+        	<h1><center><font id="head">Create your ThogaKade Account</font></center></h1>
+        </div>
+    	
+        <div class="leftSide col-lg-6">
+        	<div class="col-lg-12">
+            <center>
+            <h5>ThogaKade have User accounts For log to System</h5>
+            
+        <img id="actorImage" src="image/actors.jpg"  alt=""/> 
+        </center>
+        </div>
+        
+    <div class="col-md-12">
+    <center>
+   	  <h4>Mange your account ThogaKade</h4>
+    <img  id="thogakadeImage" src="image/shop.jpg"   alt=""/> 
+    </center>
+    </div>
+    
+    </div>
+<div class="col-lg-4">
+    <form id="createForm" >
 
-            Login type<br>
-
+            <font id="f">Login type<font><br>
+<font/>
             <select name="speed" id="speed">
-                <option>Slower</option>
-                <option>Slow</option>
-                <option selected="selected">Medium</option>
-                <option>Fast</option>
-                <option>Faster</option>
+                <option>Admin</option>
+                <option>Cashiar</option>
+                <option selected="selected">Customer</option>
+                
             </select>
             <br>
 
@@ -193,10 +214,10 @@
             <input type="text" id="birthdayID" class="input input-sm"  disabled="disabled"/><br>
             Mobile phone
             <br>
-            <input type="tel" id="telID" name="tel" class="input input-sm"/><br><br>
-            <input type="checkbox" name="agreeCheckBox" id="agreeID"/>I agree to the Thogakade Terms and Services and Privacy Policy<br>
+            <input type="tel" id="telID" name="tel" class="input input-sm"/><br>
             <Button class="btn btn-info" name="submitButton" id="submitId">Submit</button>
         </form>
+        </div>
 
 
     </body>

@@ -4,3 +4,54 @@
     
     
 }
+#createForm {
+	width: 375px;
+	background-color: #F7F7F7;
+	padding-left: 25px;
+	background-origin: border-box;
+	-webkit-box-shadow: 0px 1px 5px 0px #666666;
+	box-shadow: 0px 1px 5px 0px #666666;
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+	text-shadow: 0px 0px 0px;
+	font-size: medium;
+	padding-right: 25px;
+	font-weight: bolder;
+	height: auto;
+	padding-top: 25px;
+	max-width: 500px;
+	max-height: 900px;
+}
+#createForm input {
+	width: 325px;
+	left: 0px;
+	padding-left: 0px;
+	right: 0px;
+	padding-bottom: 0px;
+}
+#createForm #submitId {
+	width: 100px;
+	background-color: #4B8CF7;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+}
+#speed {
+	width: 250px;
+}
+#head {
+	font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif;
+	font-size: larger;
+}
+.col-lg-8 center #actorImage {
+	height: 25px;
+}
+.col-md-8 center #thogakadeImage {
+	width: 150px;
+	height: 0px;
+}
+.leftSide.col-lg-6 {
+	padding-left: 50px;
+	padding-right: 50px;
+}
+#headSentence {
+	padding-bottom: 50px;
+}

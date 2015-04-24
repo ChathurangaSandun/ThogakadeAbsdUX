@@ -24,8 +24,7 @@ and open the template in the editor.
 
             #orderForm{
                 font-size: initial;
-                border: 1px solid;
-                padding: 25px;
+                
                 height: 750px;
             }
 
@@ -55,8 +54,7 @@ and open the template in the editor.
 
 
         </style>
-
-
+        <link href="lib/css/placeOrderStyle.css" rel="stylesheet" type="text/css">
         <script type="text/javascript">
 
             var condition = "Add";
@@ -189,7 +187,8 @@ and open the template in the editor.
             <div class="row">
                 <div class="col-lg-4">
                     <form id ="orderForm"> 
-                        <label id="topic" class="label label-default col-lg-12">Order Detail</label>
+                    
+                        <label id="topic" class="label label-default col-lg-12" >Order Detail</label><br>
                         <div class="form-group">
                             <label> Order ID</label>
                             <div class="input-group col-sm-12">
@@ -203,7 +202,7 @@ and open the template in the editor.
                             <input type="text" class="form-control col-sm-12"/>
                         </div>
 
-                        <label id="topic" class="label label-default col-lg-12">Customer Detail</label>
+                        <label id="topic" class="label label-default col-lg-12">Customer Detail</label><br>
                         <div class="form-group">
                             <label> Customer ID</label>
                             <div class="input-group col-sm-12">
@@ -250,8 +249,9 @@ and open the template in the editor.
                                 <button type="button" class="btn btn-warning" id="newItemButtonID">New Item</button>
                             </div>
                             <div class="btn-group" role="group">
-                                <button type="button" class="btn btn-primary" onclick="addContact()" id="addButtonID"><font id="buttonNameID">Add</font></button>
+                                <button type="button" class="btn btn-primary" onclick="addContact()" id="addButtonID"><font id="buttonNameID">Add</font></button>                                
                             </div>
+                           
                         </div> 
 
 
