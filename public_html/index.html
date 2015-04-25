@@ -11,52 +11,30 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="lib/css/loginStyle.css" rel="stylesheet" type="text/css">
         <link href="lib/css/bootstrap.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="lib/css/bootstrap/bootstrap.min.css">
+        <script src="lib/js/jquary/jquery.min.js"></script>
+        <script src="lib/js/bootstrap/bootstrap.min.js"></script>
 
 
 
 
 
         <script>
-
-            var username;
-            var password;
-
-            function a(id, value) {
-                console.log(value);
-                document.getElementById(id).style.opacity = 1;
-                document.getElementById(id).value = "";
-                if (value === "Password") {
-                    document.getElementById(id).type = "password";
-                }
-            }
-
-            function b(id, type, value) {
-                if (document.getElementById(id).value === "") {
-                    document.getElementById(id).type = "text";
-                    if (type === "password") {
-                        document.getElementById(id).value = "Password";
-                        password = value;
-                    } else {
-                        document.getElementById(id).value = "User Name";
-                        username = value;
-                    }
-                    document.getElementById(id).style.opacity = 0.5;
-
-                } else {
-                    if (type === "password") {
-                        document.getElementById(id).type = "password";
-                        password = value;
-                    } else {
-                        document.getElementById(id).type = "text";
-                        username = value;
-                    }
-                }
-            }
+            
+            
 
 
             function signIn() {
+                
+                var username = $("#usernameInput").val();
+                var password = $("#passwordInput").val();
+                
+                        
+                
+                
                 if (username === "Admin" && password === "123") {
                     alert("successfull log");
+                    window.open("home.html");
 
                 } else {
 
@@ -78,18 +56,61 @@ and open the template in the editor.
 
     </head>
     <body>
+        
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="Home.html">ThogaKade</a>
+                </div>
+                <div>
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="Home.html">Home</a></li>
+                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Customer<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="AddCustomer.html">Add Customer</a></li>
+                                <li><a href="#">Customer update</a></li>
+                                <li><a href="#">Customer Delete</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Item<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="AddItem.html">Add Item </a></li>
+                                <li><a href="#">Item update</a></li>
+                                <li><a href="#">Item Delete</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Order<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="PlaceOrder.html">Place Order </a></li>
+                                <li><a href="#">Make Payment</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="createAccount.html"><span></span> Sign Up</a></li>
+                        <li><a href="index.html"><span></span> Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+
+
+
         <div id="headDiv">
             <center>
-            <img src="image/logo.png" width="225" height="50" alt="logo"/><br>
-            
-            <h2>One account. Control ThogaKade</h2> 
-            <h4><b>Sign in with your Account</b></h4>
-            
-            
+                <img src="image/logo.png" width="225" height="50" alt="logo"/><br>
+
+                <h2>One account. Control ThogaKade</h2> 
+                <h4><b>Sign in with your Account</b></h4>
+
+
             </center>
-            
-            
-            
+
+
+
         </div>
     <center>
         <form id="loginForm">
@@ -98,16 +119,16 @@ and open the template in the editor.
                     <center> <image src="image/login.png" id="loginImageID"/></center>
 
                 </div>
-                <input class="inputs" id="usernameInput" type="text" value="User Name"  onclick="a(this.id, this.value);"  onblur="b(this.id, this.type, this.value);" />
+                <input class="inputs" id="usernameInput" type="text" placeholder="User Name " />
                 <br>
-                <input class="inputs" id="passwordInput" type="text" value="Password"  onclick="a(this.id, this.value);"  onblur="b(this.id, this.type, this.value);" />
+                <input class="inputs" id="passwordInput" type="password" placeholder="Password"/>
                 <br>
                 <p id="errormesdegeId"></p>
                 <button class ="btn btn-info"  onclick="signIn()">Sign in</button><br>
             </center>
             <div class="col-lg-6 pull-left">
-            <input type="checkbox" name="checkBox" value="Stay signed in" id="checkbox"/>
-            Stay signed in
+                <input type="checkbox" name="checkBox" value="Stay signed in" id="checkbox"/>
+                Stay signed in
             </div>
             <a href="#" id="#" > &nbsp;&nbsp;&nbsp;	Need help?</a>
         </form>

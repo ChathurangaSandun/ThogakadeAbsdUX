@@ -44,3 +44,6 @@
 #headSentence h1 center #head {
 	font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif;
 }
+.container .row div #amoutDiv .pull-right.col-lg-12 #addOrderButtonID {
+	padding-top: 5px;
+}

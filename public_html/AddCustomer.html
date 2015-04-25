@@ -19,28 +19,30 @@ and open the template in the editor.
         <script type="text/javascript" src="lib/js/bootstrap.js" ></script>
         <link href="lib/css/bootstrap.css" rel="stylesheet">
         <link href="lib/css/style.css" rel="stylesheet">
+        
+        
         <style type="text/css">
-        #mainForm {
-			width: 350px;
-	padding-left: 25px;
-	padding-right: 25px;
-	font-style: normal;
-	font-weight: bold;
-	background-origin: border-box;
-	
-	-webkit-box-shadow: 0px 1px 5px 0px #666666;
-	box-shadow: 0px 1px 5px 0px #666666;
-	padding-bottom: 25px;
-	top: 0px;
-	padding-top: 25px;
-	background-color: #F7F7F7;
-}
-        .input {
-	width: 300px;
-}
-        #itemImage {
-	padding-top: 25px;
-}
+            #mainForm {
+                width: 350px;
+                padding-left: 25px;
+                padding-right: 25px;
+                font-style: normal;
+                font-weight: bold;
+                background-origin: border-box;
+
+                -webkit-box-shadow: 0px 1px 5px 0px #666666;
+                box-shadow: 0px 1px 5px 0px #666666;
+                padding-bottom: 25px;
+                top: 0px;
+                padding-top: 25px;
+                background-color: #F7F7F7;
+            }
+            .input {
+                width: 300px;
+            }
+            #itemImage {
+                padding-top: 25px;
+            }
         </style>
         <script>
 
@@ -160,54 +162,96 @@ and open the template in the editor.
 
     </head>
     <body>
-    <div id="headSentence">
-        	<h1><center><font id="head">Add New Customer To ThogaKade</font></center></h1>
-    </div>
-    	
+
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="Home.html">ThogaKade</a>
+                </div>
+                <div>
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="Home.html">Home</a></li>
+                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Customer<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="AddCustomer.html">Add Customer</a></li>
+                                <li><a href="#">Customer update</a></li>
+                                <li><a href="#">Customer Delete</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Item<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="AddItem.html">Add Item </a></li>
+                                <li><a href="#">Item update</a></li>
+                                <li><a href="#">Item Delete</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Order<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="PlaceOrder.html">Place Order </a></li>
+                                <li><a href="#">Make Payment</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="createAccount.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                        <li><a href="index.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+
+
+        <div id="headSentence">
+            <h1><center><font id="head">Add New Customer To ThogaKade</font></center></h1>
+        </div>
+
         <div class="leftSide col-lg-7">
-        	<div class="col-lg-12">
-            <center>
-            <h4>New customer details to thogakade system</h4>
-            
-        <img id="itemImage" src="image/customer.jpg"  alt=""/> 
-        </center>
+            <div class="col-lg-12">
+                <center>
+                    <h4>New customer details to thogakade system</h4>
+
+                    <img id="itemImage" src="image/customer.jpg"  alt=""/> 
+                </center>
+            </div>
         </div>
-        </div>
-        
-    
-    
-    <div class="col-lg-5">
-    
-        <form id="mainForm">
-            Name<br>
-            <div>
-                <div id="firstnameinputDivID">
-                    <input type="text" id="firstNameID" name="firstname" class="input input-sm" placeholder="First Name"/>
-                </div >
-                <div id="lastnameinputDivID">
-                    <input type="text" id="lastNameID" name="lastname" class="input input-sm" placeholder="Last Name"/>
+
+
+
+        <div class="col-lg-5">
+
+            <form id="mainForm">
+                Name<br>
+                <div>
+                    <div id="firstnameinputDivID">
+                        <input type="text" id="firstNameID" name="firstname" class="input input-sm" placeholder="First Name"/>
+                    </div >
+                    <div id="lastnameinputDivID">
+                        <input type="text" id="lastNameID" name="lastname" class="input input-sm" placeholder="Last Name"/>
+                    </div>
+
                 </div>
 
-            </div>
-
-            Address<br>
-            <textarea id="addressID" name="address"></textarea><br>
+                Address<br>
+                <textarea id="addressID" name="address"></textarea><br>
 
 
-            Choose Your email<br>
-            <input type="email" id="emailID" name="email" class="input input-sm"/><br>
+                Choose Your email<br>
+                <input type="email" id="emailID" name="email" class="input input-sm"/><br>
 
-            ID Number<br>
-            <input type="text" id="idNumberID" name="idnumber" class="input input-sm" placeholder="123456789V"/><br>
+                ID Number<br>
+                <input type="text" id="idNumberID" name="idnumber" class="input input-sm" placeholder="123456789V"/><br>
 
-            Mobile phone
-            <br>
-            <input type="tel" id="telID" name="tel" class="input input-sm"/><br>
+                Mobile phone
+                <br>
+                <input type="tel" id="telID" name="tel" class="input input-sm"/><br>
 
 
-            <Button class="btn btn-info" name="submitButton" id="submitId">Submit</button>
+                <Button class="btn btn-info" name="submitButton" id="submitId">Submit</button>
 
-        </form>
-    </div>
+            </form>
+        </div>
     </body>
 </html>

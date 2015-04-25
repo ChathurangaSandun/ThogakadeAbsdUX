@@ -18,16 +18,17 @@ and open the template in the editor.
         <script type="text/javascript" src="lib/js/bootstrap.js" ></script>
         <link href="lib/css/bootstrap.css" rel="stylesheet">
         <link href="lib/css/style.css" rel="stylesheet">
+      
 
         <style type="text/css">
 
             #orderForm{
-	font-size: initial;
-	height: 750px;
-	padding-top: 25px;
-	padding-left: 25px;
-	padding-right: 25px;
-	padding-bottom: 0px;
+                font-size: initial;
+                height: 750px;
+                padding-top: 25px;
+                padding-left: 25px;
+                padding-right: 25px;
+                padding-bottom: 0px;
             }
 
             #orderForm .label{
@@ -59,7 +60,7 @@ and open the template in the editor.
         <link href="lib/css/placeOrderStyle.css" rel="stylesheet" type="text/css">
         <script type="text/javascript">
 
-            var condition = "Add";
+            var condition = "Add", itemcode = "";
             var deleteButton = "<input type='button' class='btn btn-link' id='deletebtn' value='Delete' onclick='deleteRow(this)'>"; //delete button
             var updateButton = "<input type='button' class='btn btn-link' id='editbtn' value='Edit'  onclick='updateRow(this)'>";
 
@@ -68,33 +69,36 @@ and open the template in the editor.
 
                 console.log(condition);
                 if (condition === "Add") {
-                    var length = document.getElementById("orderTableID").rows.length;
+                    if (itemcode !== 'I' + $("#itemIdInputID").val()) {
+                        itemcode = 'I' + $("#itemIdInputID").val();
+                        var length = document.getElementById("orderTableID").rows.length;
 
-                    var itemID = "I " + $("#itemIdInputID").val();
-                    var description = $("#descriptionInputID").val();
-                    var unitPrice = $("#unitPriceInput").val();
-                    var qty = $("#qtyInputID").val();
-                    //console.log(qty + " " + unitPrice);
-                    var totalPrice = qty * unitPrice;
+                        var itemID = "I " + $("#itemIdInputID").val();
+                        var description = $("#descriptionInputID").val();
+                        var unitPrice = $("#unitPriceInput").val();
+                        var qty = $("#qtyInputID").val();
+                        //console.log(qty + " " + unitPrice);
+                        var totalPrice = qty * unitPrice;
 
-                    var table = document.getElementById("orderTableID");
-                    var row = table.insertRow(length);
-                    var cell1 = row.insertCell(0);
-                    var cell2 = row.insertCell(1);
-                    var cell3 = row.insertCell(2);
-                    var cell4 = row.insertCell(3);
-                    var cell5 = row.insertCell(4);
-                    var cell6 = row.insertCell(5);
-                    var cell7 = row.insertCell(6);
+                        var table = document.getElementById("orderTableID");
+                        var row = table.insertRow(length);
+                        var cell1 = row.insertCell(0);
+                        var cell2 = row.insertCell(1);
+                        var cell3 = row.insertCell(2);
+                        var cell4 = row.insertCell(3);
+                        var cell5 = row.insertCell(4);
+                        var cell6 = row.insertCell(5);
+                        var cell7 = row.insertCell(6);
 
 
-                    cell1.innerHTML = itemID;
-                    cell2.innerHTML = description;
-                    cell3.innerHTML = unitPrice;
-                    cell4.innerHTML = qty;
-                    cell5.innerHTML = totalPrice;
-                    cell6.innerHTML = updateButton;
-                    cell7.innerHTML = deleteButton;
+                        cell1.innerHTML = itemID;
+                        cell2.innerHTML = description;
+                        cell3.innerHTML = unitPrice;
+                        cell4.innerHTML = qty;
+                        cell5.innerHTML = totalPrice;
+                        cell6.innerHTML = updateButton;
+                        cell7.innerHTML = deleteButton;
+                    }
 
 
                 } else {
@@ -111,6 +115,7 @@ and open the template in the editor.
                 var i = r.parentNode.parentNode.rowIndex;
                 document.getElementById("orderTableID").deleteRow(i);
                 totalOrderAmount();
+                itemcode = "";
             }
 
 
@@ -179,20 +184,73 @@ and open the template in the editor.
 
 
 
+        <script>
+
+
+
+
+        </script>
+
+
+
     </head>
 
 
 
     <body>
-    <div id="headSentence">
-        	<h1><center><font id="head">Place Order To ThogaKade</font></center></h1>
-    </div>
+
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="Home.html">ThogaKade</a>
+                </div>
+                <div>
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="Home.html">Home</a></li>
+                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Customer<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="AddCustomer.html">Add Customer</a></li>
+                                <li><a href="#">Customer update</a></li>
+                                <li><a href="#">Customer Delete</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Item<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="AddItem.html">Add Item </a></li>
+                                <li><a href="#">Item update</a></li>
+                                <li><a href="#">Item Delete</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="PlaceOrder.html">Order<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="PlaceOrder.html">Place Order </a></li>
+                                <li><a href="#">Make Payment</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="createAccount.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                        <li><a href="index.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+
+
+
+
+        <div id="headSentence">
+            <h1><center><font id="head">Place Order To ThogaKade</font></center></h1>
+        </div>
 
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
                     <form id ="orderForm"> 
-                    
+
                         <label id="topic" class="label label-default col-lg-12" >Order Detail</label><br>
                         <div class="form-group">
                             <label> Order ID</label>
@@ -256,7 +314,7 @@ and open the template in the editor.
                             <div class="btn-group" role="group">
                                 <button type="button" class="btn btn-primary" onclick="addContact()" id="addButtonID"><font id="buttonNameID">Add</font></button>                                
                             </div>
-                           
+
                         </div> 
 
 
@@ -308,7 +366,7 @@ and open the template in the editor.
                             </div>
 
 
-                            <button type="button" class="btn btn-primary pull-right col-lg-4" onclick="" id="addOrderButtonID"><font id="buttonNameID">Add Order</font></button>
+                            <button type="button" class="btn btn-primary pull-right col-lg-12" onclick="" id="addOrderButtonID"><font id="buttonNameID">Add Order</font></button>
 
                         </div>
                     </div>
